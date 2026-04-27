@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/hugom/Nextcloud2/UNI/4.Semester/Telemedicine/**)",
+      "Bash(npm install *)",
+      "PowerShell(Get-Command node -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command npm -ErrorAction SilentlyContinue)",
+      "PowerShell($env:PATH)",
+      "Read(//c/Users/hugom/AppData/Roaming/**)",
+      "Read(//c/Program Files/**)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Git\\\\bin\\\\sh.exe\" -c \"which node 2>/dev/null || echo not found\")",
+      "Read(//c/Users/hugom/AppData/Local/**)",
+      "PowerShell(Head -10)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\hugom\" -Filter \".fnm\" -ErrorAction SilentlyContinue; Get-ChildItem \"$env:APPDATA\\\\fnm\" -ErrorAction SilentlyContinue; Get-ChildItem \"C:\\\\fnm\" -ErrorAction SilentlyContinue; Get-ChildItem \"C:\\\\Users\\\\hugom\\\\scoop\" -ErrorAction SilentlyContinue)",
+      "PowerShell(cmd /c \"where node 2>nul\")",
+      "PowerShell(cmd /c \"where npm 2>nul\")"
+    ]
+  }
+}

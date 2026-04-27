@@ -11,7 +11,11 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write ."
 	},
+	"dependencies": {
+		"jsonwebtoken": "^9.0.2"
+	},
 	"devDependencies": {
+		"daisyui": "^5.0.0",
 		"@eslint/compat": "^2.0.4",
 		"@eslint/js": "^10.0.1",
 		"@sveltejs/adapter-auto": "^7.0.1",
