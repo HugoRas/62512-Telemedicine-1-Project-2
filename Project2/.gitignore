@@ -21,3 +21,6 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+HOW_IT_WORKS.md
+SYSTEM_DIAGRAM.md

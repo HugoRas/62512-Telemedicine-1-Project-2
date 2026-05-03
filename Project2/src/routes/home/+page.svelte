@@ -91,41 +91,6 @@
 				</svg>
 				Historik & Trend
 			</button>
-			<button class="btn btn-accent btn-lg h-24 flex-col gap-1 col-span-2" onclick={() => goto('/exercises')}>
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-				</svg>
-				Anbefalinger (KRAM)
-			</button>
-		</div>
-
-		<div class="card bg-white shadow">
-			<div class="card-body p-4">
-				<h3 class="font-semibold text-gray-700 text-sm mb-2">Blodsukkertærskler (jf. retningslinjer)</h3>
-				<div class="space-y-1 text-xs">
-					<div class="flex items-center gap-2">
-						<span class="badge badge-success text-white w-3 h-3 p-0"></span>
-						<span><strong>Fastende ≤ 7,0 mmol/l</strong> – Normal</span>
-					</div>
-					<div class="flex items-center gap-2">
-						<span class="badge badge-warning text-white w-3 h-3 p-0"></span>
-						<span><strong>Fastende 7,1–10,0 mmol/l</strong> – Forhøjet, følg op</span>
-					</div>
-					<div class="flex items-center gap-2">
-						<span class="badge badge-error text-white w-3 h-3 p-0"></span>
-						<span><strong>Fastende &gt; 10,0 mmol/l</strong> – Kontakt læge</span>
-					</div>
-					<div class="divider my-1"></div>
-					<div class="flex items-center gap-2">
-						<span class="badge badge-success text-white w-3 h-3 p-0"></span>
-						<span><strong>Ikke-fastende ≤ 11,1 mmol/l</strong> – Normal</span>
-					</div>
-					<div class="flex items-center gap-2">
-						<span class="badge badge-error text-white w-3 h-3 p-0"></span>
-						<span><strong>Ikke-fastende &gt; 11,1 mmol/l</strong> – Mistanke om hyperglykæmi</span>
-					</div>
-				</div>
 			</div>
-		</div>
 	</div>
 </div>

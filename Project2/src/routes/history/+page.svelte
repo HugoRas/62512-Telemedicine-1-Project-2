@@ -90,6 +90,9 @@
 									</div>
 								{/if}
 							</div>
+							{#if log.notes}
+								<p class="text-xs text-gray-500 mt-2 border-t pt-2">{log.notes}</p>
+							{/if}
 						</div>
 					</div>
 				{/each}

@@ -1,42 +1,28 @@
-# sv
+# Diabetes Monitor
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A proof-of-concept telemedicine web app for Type 2 diabetes self-monitoring, built with SvelteKit.
 
-## Creating a project
+## What it does
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Log daily blood glucose readings with fasting/non-fasting context, optional weight, and notes
+- Instant colour-coded feedback based on Danish clinical thresholds (green / yellow / red)
+- 14-day trend view with a bar chart and scrollable history
+- JWT-based login (httpOnly cookie, 24h expiry)
+- All patient data stored in browser localStorage — no server-side database
 
-```sh
-# create a new project
-npx sv create my-app
+## Running locally
+
+```bash
+npm install
+npm run dev -- --host 127.0.0.1
 ```
 
-To recreate this project with the same configuration:
+Open [http://127.0.0.1:5173](http://127.0.0.1:5173).
 
-```sh
-# recreate this project
-npx sv@0.15.1 create --template minimal --no-types --add prettier eslint tailwindcss="plugins:none" sveltekit-adapter="adapter:auto" --install npm Project2
-```
+Login: `admin` / `123456`
 
-## Developing
+## Tech stack
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- [SvelteKit](https://kit.svelte.dev/) — framework and routing
+- [Tailwind CSS](https://tailwindcss.com/) + [DaisyUI](https://daisyui.com/) — styling
+- [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) — JWT auth

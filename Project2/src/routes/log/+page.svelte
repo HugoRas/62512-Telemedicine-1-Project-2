@@ -5,17 +5,9 @@
 	let glucose = $state('');
 	let fasting = $state(true);
 	let weight = $state('');
-	let activity = $state(1);
 	let notes = $state('');
 	let submitted = $state(false);
 	let resultStatus = $state(null);
-
-	const activityOptions = [
-		{ value: 0, label: 'Høj – Træning / sport' },
-		{ value: 1, label: 'Moderat – Gang, let husarbejde' },
-		{ value: 2, label: 'Lav – Primært siddende' },
-		{ value: 3, label: 'Ingen – Sengeleje' }
-	];
 
 	function handleSubmit() {
 		const g = parseFloat(glucose);
@@ -24,7 +16,6 @@
 			glucose: g,
 			fasting,
 			weight: weight ? parseFloat(weight) : null,
-			activity,
 			notes
 		};
 		resultStatus = glucoseStatus(log);
@@ -65,8 +56,7 @@
 						<p class="text-red-600 text-sm font-semibold">Dit blodsukker er markant forhøjet. Kontakt din læge i dag – mistanke om hyperglykæmi.</p>
 					{/if}
 					<div class="flex gap-3 w-full">
-						<button class="btn btn-outline flex-1" onclick={() => goto('/exercises')}>Anbefalinger</button>
-						<button class="btn btn-primary flex-1" onclick={() => goto('/home')}>Tilbage</button>
+						<button class="btn btn-primary w-full" onclick={() => goto('/home')}>Tilbage</button>
 					</div>
 				</div>
 			</div>
@@ -107,22 +97,6 @@
 						placeholder="fx 82.5"
 						class="input input-bordered w-full"
 					/>
-				</div>
-			</div>
-
-			<div class="card bg-white shadow">
-				<div class="card-body p-4">
-					<h2 class="font-semibold text-gray-700">Aktivitetsniveau i dag (KRAM)</h2>
-					<div class="space-y-2 mt-2">
-						{#each activityOptions as opt}
-							<button
-								class="btn btn-sm w-full justify-start {activity === opt.value ? 'btn-accent' : 'btn-outline'}"
-								onclick={() => (activity = opt.value)}
-							>
-								{opt.label}
-							</button>
-						{/each}
-					</div>
 				</div>
 			</div>
 
